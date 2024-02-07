@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2d2d2d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        button:hover {
+            background-color: #3171e0;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        form button:nth-child(odd) {
+            animation: pulse 1s infinite;
+        }
+
+        form button:nth-child(even) {
+            animation: rotate 2s infinite linear;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Carbon Footprint Calculator</h1>
+    <p>Choose a category to calculate your carbon footprint:</p>
+
+    <form action="/electricity">
+        <button type="submit">Electricity</button>
+    </form>
+
+    <form action="/transport">
+        <button type="submit">Transport</button>
+    </form>
+
+    <form action="/manufacturing">
+        <button type="submit">Manufacturing</button>
+    </form>
+
+    <form action="/construction">
+        <button type="submit">Construction</button>
+    </form>
+
+    <form action="/agriculture">
+        <button type="submit">Agriculture</button>
+    </form>
+</body>
+</html>
